@@ -61,7 +61,7 @@
           <div class="container-fluid d-flex flex-column">
           <div class="navbar-top">
               <div class="navbar-left">
-                <img src="Image/SNlogo.jpg" alt="Sport News Logo">
+                <img src="../Image/SNlogo.jpg" alt="Sport News Logo">
               </div>
               <div class="navbar-right">
                 <button class="login-button"><i class="fa fa-user"></i> Đăng nhập</button>
