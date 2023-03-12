@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport News</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share-kit/dist/css/social-share-kit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/social-share-kit/dist/js/social-share-kit.min.js"></script>
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $(".collapse").slideToggle();
+        });
+      });
+    </script>
+
+    <div class="">
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid d-flex flex-column">
+            <div class="navbar-top">
+                <div class="navbar-left">
+                  <img src="../Image/SNlogo.jpg" alt="Sport News Logo">
+                </div>
+                <div class="navbar-right">
+                  <button class="login-button"><i class="fa fa-user"></i> Đăng nhập</button>
+                  <button class="notification-button"><i class="fa fa-bell"></i></button>
+                </div>
+              </div>
+        
+            <div class="navbar-bottom">
+              <button
+                class="navbar-toggler navbar-light"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapsibleNavbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div
+                class="collapse navbar-collapse"
+                id="collapsibleNavbar"
+              >
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="../index.html">Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bóng đá</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Quần vợt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cầu lông</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bóng chuyền</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Khác</a>
+                  </li>
+                </ul>
+                <form class="d-flex" action="search.php" method="get">
+                  <div class="input-group">
+                      <input type="search" class="form-control" placeholder="Search" name="search">
+                      <button class="btn" type="submit">
+                          <i class="fa fa-search"></i>
+                      </button>
+                  </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <style>
+        .actions {
+            overflow: hidden;
+          }
+          .social-icons-2 {
+            float: left;
+            display: flex;
+            font-size: 30px;
+            align-items: left;
+            justify-content: left;
+            border-right: 1px solid #ccc;
+            padding-right: 10px;
+            margin-right: 10px;
+          }
+          .fa-facebook:hover{
+            color: #007bff;
+          }
+          .fa-twitter:hover{
+            color: #2d92ff;
+          }
+          .fa-envelope:hover{
+            color: red;
+          }
+          .social-icons-2 a {
+            margin-right: 10px;
+          }
+          .like-btn {
+            margin-right: 10px;
+          }
+          .like-btn,
+          .share-btn {
+            float: left;
+            background-color: #0077cc;
+
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .like-btn:hover,
+          .share-btn:hover {
+          background-color: #005ea6;
+          }
+          .like-btn:active,
+          .share-btn:active,
+          .like-btn:focus,
+          .share-btn:focus {
+          outline: none;
+          box-shadow: none;
+          background-color: #004b8f;
+        }
+            /* Định dạng bảng */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: gray;
+      color: white;
+    }
+</style>
+      <script>
+        $(document).ready(function() {
+            $('.like-btn').on('click', function() {
+              $(this).toggleClass('liked');
+              if ($(this).hasClass('liked')) {
+                $(this).html('<i class="fa fa-check"></i> Đã thích');
+              } else {
+                $(this).html('<i class="fa fa-thumbs-up"></i> Thích');
+              }
+            });
+          });
+      </script>
+      <main class="container">
+        <div class="row">
+          <section class="col-md-8">
+            <h3><a href="#">Russell Westbrook không vội tìm bến đỗ mới sau khi chia tay Los Angeles Lakers</a></h3>
+            <article>
+                <div class="actions">
+                    <div class="btn-group">
+                        <button class="like-btn"><i class="fa fa-thumbs-up"></i> Thích</button>
+                        <button class="share-btn"><i class="fa fa-share"></i> Chia sẻ</button>
+                    </div>
+                    <div class="social-icons-2">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                  </div>
+              <hr>
+              <p><b><i>Mặc kệ nhiều đội bóng đang muốn chiêu mộ mình, Russell Westbrook sẽ dành thời gian nghỉ ngơi và ở bên gia đình trước khi đưa ra quyết định về tương lai. </i></b></p>
+              <p>Tại kỳ chuyển nhượng vừa qua, việc Los Angeles Lakers chia tay Russell Westbrook là một trong những thương vụ được quan tâm nhất.
+
+                Ba đội bóng đã bắt tay trong một cú trade lớn, có liên quan đến 8 cầu thủ khác nhau cùng nhiều lượt pick vòng 1 và 2. Trong khi Lakers nhận về D'Angelo Russell cùng 2 cầu thủ tiềm năng là Jarred Vanderbilt và Malik Beasley, Utah Jazz chào đón Russell Westbrook cập bến.</p>              
+              <img src="../Image/Russell-Westbrook-chia-tay-lakers-bulls-clippers-heat.jpg" alt="Ảnh minh họa">
+              <p style="font-size: 13px;">Sau khi chia tay Los Angeles Lakers, Russell Westbrook hiện đang thuộc biên chế của Utah Jazz </p>
+              <p>Tuy nhiên người hâm mộ có thể sẽ khó thấy Westbrook ra sân cho Utah, thay vào đó cựu hậu vệ All-Star và All-NBA này sẽ được đội bóng thanh lý hợp đồng để trở thành cầu thủ tự do.</p>
+              <p>Ký giả uy tín Adrian Wojnarowski xác nhận thông tin trên và cập nhật thêm rằng Russell Westbrook sẽ nghỉ ngơi một thời gian, tạm rời xa bóng rổ trong 1 tuần để ở bên cạnh gia đình. Dự kiến anh sẽ đưa ra quyết định về điểm đến vào sau kỳ nghỉ All-Star, mốc thời gian rơi vào tuần cuối của tháng Hai.</p>
+              <p>Westbrook và Jazz cần đạt thoả thuận trước khi bước sang tháng Ba vì theo quy định của NBA, để có thể chơi tại Playoffs cho đội bóng khác thì Russell phải ký hợp đồng trước ngày 1/3 theo giờ Mỹ.</p>
+              <p>Ở mùa giải năm nay, Russell Westbrook đã chấp nhận “hạ mình" với vai trò nhỏ hơn tại Los Angeles Lakers. Anh ra sân từ ghế dự bị theo yêu cầu của HLV trưởng Darvin Ham, ghi trung bình 15,9 điểm cùng 7,5 assists và 6,2 rebounds mỗi trận.</p>
+              <p>Sau khi chia tay Lakers và khép lại khoảng thời gian đầy sóng gió trong màu áo vàng tím, Westbrook sẽ dành thời gian cho gia đình, thư giãn đầu óc và ổn định về tinh thần trước khi đưa ra quyết định về tương lai tại NBA.</p>
+              <br>
+              <p style="text-align: right;"><b>Anh Hải</b></p>
+            </article>
+          </section>
+          <aside class="col-md-4">
+            <h2>Tin nổi bật</h2>
+            <ul>
+              <li><a href="#">HLV Conte: 'Richarlison khá ích kỷ'</a></li>
+              <li><a href="#">HLV PSG đổ lỗi cho chấn thương</a></li>
+              <li><a href="#">Wilander: 'Bị cấm vào Mỹ tốt cho Djokovic'</a></li>
+              <li><a href="#">Bất ngờ trong ngày mở màn The Players</a></li>
+              <hr>
+              <li><h2>Video</h2></li>
+              <li>
+                <video src="../Video/Áp lực mà HLV Troussier tạo ra giúp U23 Việt Nam có nhiều tiến bộ.mp4" controls></video>
+                <p>HLV Troussier buộc thủ môn chơi bóng bằng chân.</p>
+              </li>
+              <hr>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Giải đấu</th>
+                    <th>Lịch thi đấu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Giải Ngoại hạng Anh</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Tây Ban Nha</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Đức</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Italia</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Pháp</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Champions League</td>
+                    <td>22/03/2023 - 24/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Europa League</td>
+                    <td>22/03/2023 - 24/03/2023</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ul>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <p>&copy; Copy Right 2023. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-4">
+              <p>Sports:</p>
+              <ul>
+                <li>Football</li>
+                <li>Basketball</li>
+                <li>Tennis</li>
+                <li>Golf</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <p>Contact Us:</p>
+              <ul>
+                <li><i class="fa fa-solid fa-phone fa-1x"></i> +84 123-456-78</li>
+                <li>
+                  <i class="fa fa-solid fa-envelope"></i></i> 521h0090@website.com
+                </li>
+              </ul>
+              <div class="social-icons">
+                <a href="#" id="fb"><i class="fa fa-facebook fa-3x"></i></a>
+                <a href="#" id="ins"><i class="fa fa-instagram fa-3x"></i></a>
+                <a href="#" id="lkin"><i class="fa fa-linkedin fa-3x"></i></a>
+                <a href="#" id="prin"><i class="fa fa-pinterest fa-3x"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <p>Address:</p>
+              <div class="address">
+                <p>19 Đ. Nguyễn Hữu Thọ</p>
+                <p>Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p>Subscribe to our newsletter:</p>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+                  <button type="submit" class="btn">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport News</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css"/>
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <style>
+    /* Định dạng bảng */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: gray;
+      color: white;
+    }
+  </style>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $(".collapse").slideToggle();
+        });
+      });
+    </script>
+
+    <div class="">
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid d-flex flex-column">
+            <div class="navbar-top">
+              <div class="navbar-left">
+                <img src="Image/SNlogo.jpg" alt="Sport News Logo">
+              </div>
+              <div class="navbar-right">
+                <button class="login-button"><i class="fa fa-user"></i> Đăng nhập</button>
+                <button class="notification-button"><i class="fa fa-bell"></i></button>
+              </div>
+            </div>
+        
+            <div class="navbar-bottom">
+              <button
+                class="navbar-toggler navbar-light"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapsibleNavbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div
+                class="collapse navbar-collapse"
+                id="collapsibleNavbar"
+              >
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bóng đá</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Quần vợt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cầu lông</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bóng chuyền</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Khác</a>
+                  </li>
+                </ul>
+                <form class="d-flex" action="html/search.php" method="get">
+                  <div class="input-group">
+                      <input type="search" class="form-control" placeholder="Search" name="search">
+                      <button class="btn" type="submit">
+                          <i class="fa fa-search"></i>
+                      </button>
+                  </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="container">
+        <div class="row">
+          <section class="col-md-8">
+            <h2>Tin tức mới nhất</h2>
+            <article>
+              <img src="Image/u20vn.png" alt="Ảnh minh họa">
+              <h3><a href="html/u20vn.html">U20 Việt Nam bị loại tại Giải U20 Châu Á</a></h3>
+              <p>Sau trận đấu với Iran vào ngày 07/03/2023, U20 Việt Nam đã chính thức bị loại khỏi giải U20 Quốc tế. Trong trận đấu quyết định vòng bảng, U20 Việt Nam đã thua Iran với tỉ số 1-3. Đây là một kết quả không may cho đội bóng trẻ Việt Nam, nhưng đây cũng là một trải nghiệm quý giá cho các cầu thủ U20 Việt Nam trong việc chuẩn bị cho các giải đấu quốc tế trong tương lai.</p>
+            </article>
+            <article>
+              <img src="Image/mu_betis.jfif" alt="Ảnh minh họa">
+              <h3><a href="html/mu-betis.html">Man Utd đại thắng Real Betis</a></h3>
+              <p>Trong trận đấu lượt về vòng 1/8 Europa League diễn ra vào ngày 9/3/2023, Manchester United đã giành chiến thắng đậm đà trước Real Betis với tỉ số 4-1. Với chiến thắng này, Manchester United đã đặt một chân vào vòng tứ kết của giải đấu. Các cầu thủ của Manchester United đã có một trận đấu ấn tượng, đặc biệt là tiền vệ đội trưởng Bruno Fernandes, người đã ghi một bàn thắng và kiến tạo một bàn nữa trong trận đấu.</p>
+            </article>
+            <article>
+              <img src="Image/Golf-TheMaster.jpeg" alt="Ảnh minh họa">
+              <h3><a href="html/theMaster2023.html">The Masters 2023: Siêu sao hội tụ</a></h3>
+              <p>Giải đấu golf danh giá nhất thế giới - Masters sẽ diễn ra từ ngày 6 đến ngày 9/4/2023 tại sân Augusta National Golf Club ở Georgia, Mỹ. Các golfer hàng đầu như Tiger Woods, Rory McIlroy, Jordan Spieth, Phil Mickelson đang tích cực tập luyện để chuẩn bị cho giải đấu này. Người hâm mộ trên toàn thế giới đang rất mong chờ để xem ai sẽ trở thành nhà vô địch của Masters năm nay.</p>
+            </article>
+            <article>
+              <img src="Image/Volleyball.jpg" alt="Ảnh minh họa">
+              <h3><a href="html/Volleyball.html">Xác định chủ nhà, thời gian diễn ra vòng loại môn bóng chuyền Olympic Paris 2024</a></h3>
+              <p>Mới đây, LĐBC Thế giới đã công bố vòng loại môn bóng chuyền của Olympic Paris 2024. Theo đó, Brazil cùng Trung Quốc, Ba Lan và Nhật Bản được lựa chọn làm chủ nhà cho các trận đấu vòng loại.</p>
+            </article>
+            <article>
+              <img src="Image/Russell-Westbrook-chia-tay-lakers-bulls-clippers-heat.jpg" alt="Ảnh minh họa">
+              <h3><a href="html/basketball.html">Russell Westbrook không vội tìm bến đỗ mới sau khi chia tay Los Angeles Lakers</a></h3>
+              <p>Tại kỳ chuyển nhượng vừa qua, việc Los Angeles Lakers chia tay Russell Westbrook là một trong những thương vụ được quan tâm nhất.
+                Ba đội bóng đã bắt tay trong một cú trade lớn, có liên quan đến 8 cầu thủ khác nhau cùng nhiều lượt pick vòng 1 và 2. Trong khi Lakers nhận về D'Angelo Russell cùng 2 cầu thủ tiềm năng là Jarred Vanderbilt và Malik Beasley, Utah Jazz chào đón Russell Westbrook cập bến.</p>
+            </article>
+          </section>
+          <aside class="col-md-4">
+            <h2>Tin nổi bật</h2>
+            <ul>
+              <li><a href="#">HLV Conte: 'Richarlison khá ích kỷ'</a></li>
+              <li><a href="#">HLV PSG đổ lỗi cho chấn thương</a></li>
+              <li><a href="#">Wilander: 'Bị cấm vào Mỹ tốt cho Djokovic'</a></li>
+              <li><a href="#">Bất ngờ trong ngày mở màn The Players</a></li>
+              <hr>
+              <li><h2>Video</h2></li>
+              <li>
+                <video src="Video/Áp lực mà HLV Troussier tạo ra giúp U23 Việt Nam có nhiều tiến bộ.mp4" controls></video>
+                <p>HLV Troussier buộc thủ môn chơi bóng bằng chân.</p>
+              </li>
+              <hr>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Giải đấu</th>
+                    <th>Lịch thi đấu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Giải Ngoại hạng Anh</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Tây Ban Nha</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Đức</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Italia</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Pháp</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Champions League</td>
+                    <td>22/03/2023 - 24/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Europa League</td>
+                    <td>22/03/2023 - 24/03/2023</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ul>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <p>&copy; Copy Right 2023. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-4">
+              <p>Sports:</p>
+              <ul>
+                <li>Football</li>
+                <li>Basketball</li>
+                <li>Tennis</li>
+                <li>Golf</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <p>Contact Us:</p>
+              <ul>
+                <li><i class="fa fa-solid fa-phone fa-1x"></i> +84 123-456-78</li>
+                <li>
+                  <i class="fa fa-solid fa-envelope"></i></i> 521h0090@website.com
+                </li>
+              </ul>
+              <div class="social-icons">
+                <a href="#" id="fb"><i class="fa fa-facebook fa-3x"></i></a>
+                <a href="#" id="ins"><i class="fa fa-instagram fa-3x"></i></a>
+                <a href="#" id="lkin"><i class="fa fa-linkedin fa-3x"></i></a>
+                <a href="#" id="prin"><i class="fa fa-pinterest fa-3x"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <p>Address:</p>
+              <div class="address">
+                <p>19 Đ. Nguyễn Hữu Thọ</p>
+                <p>Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p>Subscribe to our newsletter:</p>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+                  <button type="submit" class="btn">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

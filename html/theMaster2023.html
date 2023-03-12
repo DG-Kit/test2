@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport News</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/main.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share-kit/dist/css/social-share-kit.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/social-share-kit/dist/js/social-share-kit.min.js"></script>
+    <script src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <script>
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $(".collapse").slideToggle();
+        });
+      });
+    </script>
+
+    <div class="">
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid d-flex flex-column">
+            <div class="navbar-top">
+                <div class="navbar-left">
+                  <img src="../Image/SNlogo.jpg" alt="Sport News Logo">
+                </div>
+                <div class="navbar-right">
+                  <button class="login-button"><i class="fa fa-user"></i> Đăng nhập</button>
+                  <button class="notification-button"><i class="fa fa-bell"></i></button>
+                </div>
+              </div>
+        
+            <div class="navbar-bottom">
+              <button
+                class="navbar-toggler navbar-light"
+                type="button"
+                data-toggle="collapse"
+                data-target="#collapsibleNavbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+        
+              <div
+                class="collapse navbar-collapse"
+                id="collapsibleNavbar"
+              >
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="../index.html">Trang chủ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bóng đá</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Quần vợt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cầu lông</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Bóng chuyền</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Khác</a>
+                  </li>
+                </ul>
+                <form class="d-flex" action="search.php" method="get">
+                  <div class="input-group">
+                      <input type="search" class="form-control" placeholder="Search" name="search">
+                      <button class="btn" type="submit">
+                          <i class="fa fa-search"></i>
+                      </button>
+                  </div>
+              </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <style>
+        .actions {
+            overflow: hidden;
+          }
+          .social-icons-2 {
+            float: left;
+            display: flex;
+            font-size: 30px;
+            align-items: left;
+            justify-content: left;
+            border-right: 1px solid #ccc;
+            padding-right: 10px;
+            margin-right: 10px;
+          }
+          .fa-facebook:hover{
+            color: #007bff;
+          }
+          .fa-twitter:hover{
+            color: #2d92ff;
+          }
+          .fa-envelope:hover{
+            color: red;
+          }
+          .social-icons-2 a {
+            margin-right: 10px;
+          }
+          .like-btn {
+            margin-right: 10px;
+          }
+          .like-btn,
+          .share-btn {
+            float: left;
+            background-color: #0077cc;
+
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+          }
+          .like-btn:hover,
+          .share-btn:hover {
+          background-color: #005ea6;
+          }
+          .like-btn:active,
+          .share-btn:active,
+          .like-btn:focus,
+          .share-btn:focus {
+          outline: none;
+          box-shadow: none;
+          background-color: #004b8f;
+        }
+            /* Định dạng bảng */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: gray;
+      color: white;
+    }
+      </style>
+      <script>
+        $(document).ready(function() {
+            $('.like-btn').on('click', function() {
+              $(this).toggleClass('liked');
+              if ($(this).hasClass('liked')) {
+                $(this).html('<i class="fa fa-check"></i> Đã thích');
+              } else {
+                $(this).html('<i class="fa fa-thumbs-up"></i> Thích');
+              }
+            });
+          });
+      </script>
+      <main class="container">
+        <div class="row">
+          <section class="col-md-8">
+            <h3><a href="#">The Masters 2023: Siêu sao hội tụ</a></h3>
+            <article>
+                <div class="actions">
+                    <div class="btn-group">
+                        <button class="like-btn"><i class="fa fa-thumbs-up"></i> Thích</button>
+                        <button class="share-btn"><i class="fa fa-share"></i> Chia sẻ</button>
+                    </div>
+                    <div class="social-icons-2">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-envelope"></i></a>
+                    </div>
+                  </div>
+              <hr>
+              <p><b><i>Giải major đầu tiên của năm 2023 từ lâu đã là một sự kiện đặc biệt bởi những điều kiện tham dự khắt khe. Mùa giải năm nay còn đặc biệt hơn bao giờ hết khi lần đầu tiên quy tụ các ngôi sao hạng A kể từ sau khi thế giới golf phân chia thành hai chiến tuyến PGA Tour - LIV Golf.</i></b></p>
+              <p><b>Giải đấu khắc nghiệt nhất hành tinh </b></p>
+              <img src="../Image/img1_golf.jpeg" alt="">
+              <p>Đối với mọi golfer, việc giành được suất thi đấu tại Masters là một niềm vinh dự lớn bởi giải đấu đặt ra rất nhiều tiêu chuẩn khắt khe. Mặc dù là một trong bốn giải golf lớn nhất hành tinh, nhưng số lượng vận động viên được quyền thi đấu ở đấu trường này lại vô cùng nhỏ (90 - 100 người), chỉ có số ít người chơi chuyên nghiệp đủ tiêu chuẩn vượt qua bộ tiêu chí sàng lọc khắt khe do Augusta National Golf Club quy định. </p>
+              <p>Để tranh tài tại Masters, các golfer phải đạt được 1 trong tổng số 19 điều kiện mà Augusta National đặt ra, trong đó những cựu vương của giải đấu sẽ luôn có một suất đặc cách tham dự cho đến khi kết thúc sự nghiệp. Bên cạnh đó, quán quân tại 3 giải nhà nghề khác là PGA Championship, U.S. Open và The Open Championship cũng sẽ nhận được thư mời, tuy nhiên vé vàng này chỉ có hiệu lực trong khoảng từ 3 đến 5 năm kể từ khi đoạt cúp. </p>
+              <img src="../Image/golfer.jpeg" alt="Ảnh minh họa">
+              <p>Golfer giành huy chương vàng Olympic sẽ được đặc cách thi đấu trong một năm. Ngoài ra, nhà vô địch ở các giải Amateur danh tiếng và những cái tên trong top 50 BXH Golf Thế giới cũng sẽ được trao cơ hội cạnh tranh tại The Masters. Danh sách đầy đủ sẽ được ban tổ chức giải công bố trước thềm khởi tranh sự kiện một tuần. </p>
+              <p>Năm nay, tính đến hết tháng Hai, cách thời gian diễn ra giải đấu chỉ hơn 1 tháng nữa, mới chỉ có 41 golfer đủ điều kiện tham dự giải. </p>
+              <p><b>Cuộc chạm trán giữa hai chiến tuyến </b></p>
+              <p>Trong mùa giải 2023, Masters chắc chắn sẽ đặc biệt hơn bao giờ hết với sự hiện diện của các LIV Golfer cùng “phần còn lại của Thế giới". Đây sẽ là lần đầu tiên các siêu sao hạng A gặp lại nhau sau khi đế chế LIV Golf ra đời, đồng nghĩa với việc các đấu thủ PGA Tour sẽ “đụng độ" người chơi LIV Golf trên bàn tiệc Champion Dinner và chiêu đãi người hâm mộ những trận đấu bất phân thắng bại. </p>
+              <img src="../Image/antony.jfif" alt="Ảnh minh họa">
+              <p>Theo danh sách đã công bố, có tất cả 17 tuyển thủ LIV Golf giành được suất tham dự Masters 2023. Trong đó có 6 người chơi LIV Golf hiện tại được đặc cách tham dự Masters trọn đời với tư cách là nhà vô địch trong quá khứ, gồm: Dustin Johnson, Patrick Reed, Sergio Garcia, Bubba Watson, Charl Schwartzel và Phil Mickelson.</p>
+              <p>Cameron Smith, Bryson DeChambeau và Brooks Koepka sẽ nhận được lời mời tranh đấu tại Masters 2023 với việc giành chiến thắng trong các giải đấu major khác trong 5 năm qua. Joaquin Niemann, Talor Gooch, Harold Varner III, Jason Kokrak, Kevin Na, Abraham Ancer và Louis Oosthuizen được góp mặt nhờ thứ hạng nằm trong top 50 OWGR. </p>
+              <p><b>Augusta National - đấu trường lịch sử </b></p>
+              <p>Khác với những sự kiện thể thao khác - luôn thay đổi địa điểm tổ chức qua từng mùa giải, Masters là giải major duy nhất được tổ chức tại một địa điểm cố định, giữ vững truyền thống gần 90 năm. Nhờ đó, những ngôi sao đang lên và những tên tuổi triển vọng được có cơ hội tranh tài trên đấu trường mà hàng trăm huyền thoại đã tỏa sáng. Là giải major đầu tiên trong năm, Masters mở ra bước đệm cho giấc mơ sưu tầm Grand Slam của các siêu sao - mang ý nghĩa rằng chỉ có “chiến binh" cuối cùng mới có thể bước tiếp trên hành trình này. </p>
+              <img src="../Image/Sangolf1.jpeg" alt="Ảnh minh họa">
+              <p>Trong kỳ Masters thứ 87, sân Augusta National tiếp tục đưa ra những thay đổi và điều chỉnh để tăng độ khó và thử thách bản lĩnh của những siêu sao. Hố 13 par-5 mang tính biểu tượng của sân được tăng chiều dài thêm 35 yards, lên tới 545 yarrds so với 510 yards vào năm ngoái, hứa hẹn sẽ trở thành một “bài toán nan giải" thách thức các golfer hàng đầu thế giới. Chiều dài tổng thể mới của sân thi đấu Masters là 7.545 yards. </p>
+              <p>Với chiều dài 545 yards, dường như hố 13 vẫn không phải là một hố par 5 “khó nhằn". Nhưng với thiết kế dogleg trái cùng Rae's Creek quanh green, việc “bổ sung" thêm 35 yards sẽ khiến việc đưa bóng đến green bằng 2 gậy trở nên khó khăn hơn bao giờ hết.  </p>
+              <img style="height:auto" src="../Image/Sangolf2.png" alt="Ảnh minh họa">
+              <p style="font-size: 13px">Tổng thể hố 13 sân Augusta National sau khi thay đổi</p>
+              <p>Trước đó, tại Masters 2022, Augusta National đã thay đổi độ dài các hố par-5 còn lại ở back-nine, trong đố hố số 15 tăng thêm 20 yards. Điều đó dẫn đến việc không có điểm eagle nào được ghi trên hố 15 trong suốt 4 vòng đấu. </p>
+              <br>
+              <p style="text-align: right;"><b>Anh Hiếu</b></p>
+            </article>
+          </section>
+          <aside class="col-md-4">
+            <h2>Tin nổi bật</h2>
+            <ul>
+              <li><a href="#">HLV Conte: 'Richarlison khá ích kỷ'</a></li>
+              <li><a href="#">HLV PSG đổ lỗi cho chấn thương</a></li>
+              <li><a href="#">Wilander: 'Bị cấm vào Mỹ tốt cho Djokovic'</a></li>
+              <li><a href="#">Bất ngờ trong ngày mở màn The Players</a></li>
+              <hr>
+              <li><h2>Video</h2></li>
+              <li>
+                <video src="../Video/Áp lực mà HLV Troussier tạo ra giúp U23 Việt Nam có nhiều tiến bộ.mp4" controls></video>
+                <p>HLV Troussier buộc thủ môn chơi bóng bằng chân.</p>
+              </li>
+              <hr>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Giải đấu</th>
+                    <th>Lịch thi đấu</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Giải Ngoại hạng Anh</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Tây Ban Nha</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Đức</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Italia</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Giải VĐQG Pháp</td>
+                    <td>19/03/2023 - 21/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Champions League</td>
+                    <td>22/03/2023 - 24/03/2023</td>
+                  </tr>
+                  <tr>
+                    <td>Europa League</td>
+                    <td>22/03/2023 - 24/03/2023</td>
+                  </tr>
+                </tbody>
+              </table>
+            </ul>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="bg-dark text-white py-4">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <p>&copy; Copy Right 2023. All Rights Reserved.</p>
+            </div>
+            <div class="col-md-4">
+              <p>Sports:</p>
+              <ul>
+                <li>Football</li>
+                <li>Basketball</li>
+                <li>Tennis</li>
+                <li>Golf</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <p>Contact Us:</p>
+              <ul>
+                <li><i class="fa fa-solid fa-phone fa-1x"></i> +84 123-456-78</li>
+                <li>
+                  <i class="fa fa-solid fa-envelope"></i></i> 521h0090@website.com
+                </li>
+              </ul>
+              <div class="social-icons">
+                <a href="#" id="fb"><i class="fa fa-facebook fa-3x"></i></a>
+                <a href="#" id="ins"><i class="fa fa-instagram fa-3x"></i></a>
+                <a href="#" id="lkin"><i class="fa fa-linkedin fa-3x"></i></a>
+                <a href="#" id="prin"><i class="fa fa-pinterest fa-3x"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+              <p>Address:</p>
+              <div class="address">
+                <p>19 Đ. Nguyễn Hữu Thọ</p>
+                <p>Tân Hưng, Quận 7, Thành phố Hồ Chí Minh</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <p>Subscribe to our newsletter:</p>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+                  <button type="submit" class="btn">Subscribe</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
