@@ -33,6 +33,28 @@
           $(".collapse").slideToggle();
         });
       });
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $(".collapse").slideToggle();
+        });
+      });
+      $(document).ready(function() {
+        // Lấy đối tượng button thông báo
+        var notificationButton = $('.notification-button');
+        
+        // Xử lý sự kiện click
+        notificationButton.on('click', function() {
+        // Yêu cầu cho phép trang web gửi thông báo
+        Notification.requestPermission().then(function(permission) {
+        if(permission === 'granted') {
+        // Nếu được cho phép, hiển thị thông báo
+        var notification = new Notification('Thông báo', {
+        body: 'Trang web đã được cho phép gửi thông báo',
+        });
+        }
+        });
+        });
+        });
     </script>
 
     <div class="">
