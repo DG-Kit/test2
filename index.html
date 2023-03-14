@@ -49,23 +49,17 @@
           $(".collapse").slideToggle();
         });
       });
-      $(document).ready(function() {
-        // Lấy đối tượng button thông báo
-        var notificationButton = $('.notification-button');
-        
-        // Xử lý sự kiện click
-        notificationButton.on('click', function() {
-        // Yêu cầu cho phép trang web gửi thông báo
-        Notification.requestPermission().then(function(permission) {
-        if(permission === 'granted') {
-        // Nếu được cho phép, hiển thị thông báo
-        var notification = new Notification('Thông báo', {
-        body: 'Trang web đã được cho phép gửi thông báo',
+      $(document).ready(function () {
+        $('.notification-button').click(function () {
+          Notification.requestPermission().then(function (permission) {
+            if (permission === 'granted') {
+              var notification = new Notification('Thông báo', {
+                body: 'Bạn đã bật thông báo thành công!!',
+              });
+            }
+          });
         });
-        }
-        });
-        });
-        });
+      });
     </script>
 
     <div class="">
@@ -77,7 +71,7 @@
                 <img src="Image/SNlogo.jpg" alt="Sport News Logo">
               </div>
               <div class="navbar-right">
-                <button class="login-button"><i class="fa fa-user"></i> Đăng nhập</button>
+                <a href="html/login.html"><button class="login-button"><i class="fa fa-user"></i> Đăng nhập</button></a>
                 <button class="notification-button"><i class="fa fa-bell"></i></button>
               </div>
             </div>
@@ -239,7 +233,6 @@
                 <li><i class="fa fa-solid fa-phone fa-1x"></i> +84 123-456-78</li>
                 <li>
                   <i class="fa fa-solid fa-envelope"></i></i> 521h0090@website.com
-                  <i class="fa fa-solid fa-envelope"></i></i> 521h0012@website.com
                 </li>
               </ul>
               <div class="social-icons">

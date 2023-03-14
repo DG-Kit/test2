@@ -33,28 +33,28 @@
           $(".collapse").slideToggle();
         });
       });
+
       $(document).ready(function () {
-        $(".navbar-toggler").click(function () {
-          $(".collapse").slideToggle();
+        $('.notification-button').click(function () {
+          Notification.requestPermission().then(function (permission) {
+            if (permission === 'granted') {
+              var notification = new Notification('Thông báo', {
+                body: 'Bạn đã bật thông báo thành công!',
+              });
+            }
+          });
         });
       });
-      $(document).ready(function() {
-        // Lấy đối tượng button thông báo
-        var notificationButton = $('.notification-button');
-        
-        // Xử lý sự kiện click
-        notificationButton.on('click', function() {
-        // Yêu cầu cho phép trang web gửi thông báo
-        Notification.requestPermission().then(function(permission) {
-        if(permission === 'granted') {
-        // Nếu được cho phép, hiển thị thông báo
-        var notification = new Notification('Thông báo', {
-        body: 'Trang web đã được cho phép gửi thông báo',
-        });
-        }
-        });
-        });
-        });
+      function shareOnFacebook() {
+        // Lấy link hiện tại
+        var currentUrl = window.location.href;
+      
+        // Tạo URL chia sẻ trên Facebook
+        var shareUrl = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(currentUrl);
+      
+        // Mở trang chia sẻ trong cửa sổ mới
+        window.open(shareUrl, '_blank');
+      }
     </script>
 
     <div class="">
@@ -209,7 +209,7 @@
                 <div class="actions">
                     <div class="btn-group">
                         <button class="like-btn"><i class="fa fa-thumbs-up"></i> Thích</button>
-                        <button class="share-btn"><i class="fa fa-share"></i> Chia sẻ</button>
+                        <button class="share-btn" onclick="shareOnFacebook()"><i class="fa fa-share"></i> Chia sẻ</button>
                     </div>
                     <div class="social-icons-2">
                       <a href="#"><i class="fa fa-facebook"></i></a>
@@ -311,7 +311,6 @@
                 <li><i class="fa fa-solid fa-phone fa-1x"></i> +84 123-456-78</li>
                 <li>
                   <i class="fa fa-solid fa-envelope"></i></i> 521h0090@website.com
-                  <i class="fa fa-solid fa-envelope"></i></i> 521h0012@website.com
                 </li>
               </ul>
               <div class="social-icons">
